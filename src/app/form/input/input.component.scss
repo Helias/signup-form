@@ -1,0 +1,34 @@
+$input-bg-border: #f6f6f6;
+$input-bg-focus: #fff;
+$input-placeholder: #cccccc;
+
+$ng-invalid: #ff7961;
+$ng-valid: #80e27e;
+
+label {
+  display: block;
+
+  input {
+    background-color: $input-bg-border;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    border: 2px solid $input-bg-border;
+  }
+
+  input:focus {
+    background-color: $input-bg-focus;
+  }
+
+  input::placeholder {
+    color: $input-placeholder;
+  }
+
+  .ng-touched.ng-invalid {
+    border-color: $ng-invalid;
+  }
+
+  .ng-touched.ng-valid {
+    border-color: $ng-valid;
+  }
+}

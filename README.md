@@ -1,16 +1,32 @@
 # SignUpForm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+## How to install
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Requirements
 
-## Code scaffolding
+To run the application you need to have installed  **Nodejs & npm**.
+To install them you can easily follow [this guide](https://nodejs.org/en/download/package-manager/) of the official nodejs website.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The guide provides you all the details for several Linux distros, for Windows and Mac.
 
-## Build
+### Installation
+
+Once you have installed the requirements you can install the software dependencies using the package manager `npm` in the following way:
+```
+npm install
+```
+
+### Start the application
+
+Well, now you are available to run the application using the `ng` tool with the following command:
+```
+ng serve -o
+```
+
+The `-o` parameter is optional, it will open you the web application in your browser automatically but you can also avoid it and open it manually.
+
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 

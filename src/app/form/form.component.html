@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-sm-12">
+
+      <form class="text-center py-5 mb-5" [formGroup]="signupForm">
+        <h2>Sign Up</h2>
+
+        <app-input [field]="'First Name'" [id]="'firstName'" [control]="firstName" class="mt-3"></app-input>
+        <app-error [control]="firstName" [error]="'pattern'">Invalid First Name!</app-error>
+
+        <app-input [field]="'Last Name'" [id]="'lastName'" [control]="lastName"></app-input>
+        <app-error [control]="lastName" [error]="'pattern'">Invalid Last Name!</app-error>
+
+        <app-input [field]="'Email'" [id]="'email'" [control]="email" [type]="'email'"></app-input>
+        <app-error [control]="email" [error]="'pattern'">Invalid email!</app-error>
+
+        <app-input [field]="'Password'" [id]="'password'" [control]="password" [type]="'password'"></app-input>
+        <app-error [control]="password" [error]="'minlength'">The password must have at least 8 characters!</app-error>
+        <app-error [control]="password" [error]="'pattern'">The password must have at least an uppercase and lowercase letter!</app-error>
+        <app-error [control]="signupForm" [error]="'firstName'">The password contains words of First Name!</app-error>
+        <app-error [control]="signupForm" [error]="'lastName'">The password contains words of Last Name!</app-error>
+
+        <div class="mt-3">
+          <button
+            class="btn btn-lg btn-primary"
+            (click)="submitForm()"
+            [disabled]="!signupForm.valid"
+            *ngIf="!finishLoading && !loading"
+          >
+            Sign Up
+          </button>
+
+          <img src="assets/loading.gif" width="32" height="32" alt="loading" *ngIf="loading && !finishLoading" />
+          <img src="assets/check-mark.png" width="32" height="32" alt="check mark" *ngIf="finishLoading" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
